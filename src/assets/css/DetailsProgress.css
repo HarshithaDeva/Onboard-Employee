@@ -1,0 +1,331 @@
+.Home {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+}
+
+.App {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.step-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  background-color: white;
+  margin-right: 10px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.step-circle.active {
+  border: 1px solid #0C75EB;
+  background-color: white;
+  padding: 3px;
+}
+
+.step-circle.completed {
+  border-color: #0C75EB;
+  background-color: #0C75EB;
+  color: white;
+}
+
+.filled-circle {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: #0C75EB;
+}
+
+.checkmark {
+  font-size: 12px;
+}
+
+.step-label {
+  color: #ddd;
+  margin-right: 10px;
+}
+
+.step-label.active {
+  color: black;
+}
+
+.step-line {
+  width: 180px;
+  height: 2px;
+  background-color: #ddd;
+  position: relative;
+  z-index: 0;
+  margin-right: 10px;
+}
+
+.step-line.active {
+  background-color: #0C75EB;
+}
+
+.substeps {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 44px;
+  gap: 10px;
+}
+
+.substep-bar {
+  width: 340px;
+  height: 2px;
+  background-color: #ddd;
+  position: relative;
+  overflow: hidden;
+}
+
+.substep-bar-inner {
+  height: 100%;
+  width: 0;
+  background-color: #0C75EB;
+  transition: width 0.3s ease;
+}
+
+.substep-bar-inner.active {
+  width: 100%;
+}
+
+.substep-bar-inner.completed {
+  background-color: #ddd;
+  width: 100%;
+  transition: width 0.3s ease;
+
+
+}
+
+.card {
+  border: 1px solid #ddd;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  padding: 42px 32px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 80%;
+  min-height: 130px;
+  margin: auto;
+}
+
+.card label {
+  display: block;
+}
+
+.card input {
+  width: calc(100% - 20px);
+  padding: 5px;
+  margin-top: 5px;
+  border: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.cardInput input:focus {
+  border: none;
+  outline: none;
+
+}
+
+.cardInputContainer {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.cardInput {
+  border: 1px solid rgb(222, 220, 220);
+  width: 44%;
+  padding: 10px 12px;
+  border-radius: 8px;
+
+}
+
+.cardHeader {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.cardPayInput {
+  width: 95%;
+  margin-bottom: 16px;
+}
+
+.cardPayInput .MuiOutlinedInput-notchedOutline {
+  border: none;
+}
+
+.cardPayInput .MuiFormControl-root {
+  height: 40px;
+}
+
+.cardPayInput .MuiInputBase-root {
+  padding: 0 !important;
+}
+
+.cardInputAddress {
+  border: 1px solid rgb(222, 220, 220);
+  padding: 10px 12px;
+  border-radius: 8px;
+  width: 43%;
+}
+
+.cardInputAddress label {
+  color: rgba(115, 115, 115, 1);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  text-align: left;
+
+}
+
+.cardInputAddress input:focus {
+  border: none;
+  outline: none;
+
+}
+
+.cardInput label {
+  color: rgba(115, 115, 115, 1);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  text-align: left;
+
+}
+
+.buttons {
+  display: flex;
+  margin-left: 84%;
+  margin-top: 24px;
+}
+
+.buttons Button {
+  text-transform: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #0C75EB;
+  color: white;
+  border-radius: 8px;
+}
+
+.buttons Button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.cardAddressContainer {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardAddressContainer Button {
+  border: none;
+  background-color: white;
+  font-size: 30px;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.cardAddressContainer .removeButton {
+  border: none;
+  background-color: white;
+  font-size: 40px;
+  color: red;
+  font-family: monospace;
+}
+
+.cardAddressWrapper {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .newLevelButton {
+  width: 100%;
+  background-color: #F5F9FF;
+  padding: 8px;
+  border-radius: 8px;
+  color: #0C75EB;
+  box-shadow: none;
+  margin-top: 4px;
+}
+
+.card .newLevelButton:hover {
+  width: 100%;
+  background-color: #bdd6fb;
+  padding: 8px;
+  border-radius: 8px;
+  color: #0C75EB;
+  box-shadow: none;
+  margin-top: 4px;
+}
+
+.finishDialogContainer {
+  text-align: center;
+  padding: 24px 40px;
+}
+
+.finishDialogContainer .dialogText {
+  font-size: 22px;
+  font-weight: 600;
+  color: green;
+  margin: 16px 0;
+}
+
+.finishDialogContainer .dialogConfirmText {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.finishDialogContainer .dialogButton {
+  margin: 0;
+  background-color: #0C75EB;
+  text-transform: none;
+}
+
+.finishDialogContainer .dialogAction {
+  justify-content: center;
+}
+
+.finishDialogContainer .MuiPaper-root {
+  padding: 12px 24px 24px;
+}
+
+.errors {
+  font-size: 14px;
+  color: red;
+  padding-top: 16px;
+  text-align: center;
+}
